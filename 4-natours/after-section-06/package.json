@@ -5,13 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start:dev": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "test": "node --check app.js && node --check server.js && node -e \"require('./app')\""
   },
   "author": "Jonas Schmedtmann",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^7.0.0",
-    "express": "^4.16.4",
+    "express": "4.17.3",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
@@ -24,5 +25,11 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.17.0"
+  },
+  "overrides": {
+    "express": "4.17.3",
+    "qs": "6.11.0",
+    "ajv": "6.12.6",
+    "minimatch": "3.1.2"
   }
 }
