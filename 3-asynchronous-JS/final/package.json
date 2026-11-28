@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --check index.js && node -e \"require('superagent')\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "superagent": "^5.0.2"
+  },
+  "overrides": {
+    "qs": "6.11.0",
+    "cookiejar": "2.1.4"
   }
 }
